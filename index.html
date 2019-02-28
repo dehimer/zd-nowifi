@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Подключитесь к Wi-Fi MASLENITSA</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="root"></div>
+
+    <style type="text/css">
+        @font-face {
+            font-family: OpenSansRegular;
+            src: url("public/theme/Fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: OpenSansBold;
+            src: url("public/theme/Fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: OpenSansSemiBold;
+            src: url("public/theme/Fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: OpenSansExtraBold;
+            src: url("public/theme/Fonts/OpenSans/OpenSans-ExtraBold.ttf") format("truetype");
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            background-color: #ebe4db;
+            background-image: url("public/theme/backgrond.png");
+            background-size: cover;
+
+            overflow: hidden;
+        }
+
+        html {
+            font-family: OpenSansRegular, sans-serif;
+        }
+
+
+
+        .app {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+
+
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 11vh;
+            width: 100%;
+        }
+
+        .title .top {
+            flex: 0 0 10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .title .top .center {
+            flex: 0 0 70%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .title .top .center img {
+            height: 60%;
+        }
+
+        .title .top .left {
+            height: 100%;
+            flex: 0 0 15%;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .title .top .left img {
+            height: 100%;
+        }
+
+        .title .top .arrow {
+            height: 100%;
+            flex: 0 0 15%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .title .top .arrow img {
+            height: 40%;
+        }
+
+        .title .top .right {
+            height: 100%;
+            flex: 0 0 15%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .title .top .right img {
+            height: 100%;
+        }
+
+        .title .bottom {
+            text-align: center;
+            margin-top: -10px;
+        }
+
+        .title .bottom img {
+            height: 4vh;
+        }
+
+
+        .wifineeded {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .top {
+            height: 10%;
+        }
+
+        .top img {
+            height: 7vh;
+        }
+
+        .message {
+            height: 60%;
+            width: 100%;
+            color: #c53b36;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 3vh;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: OpenSansSemiBold, sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .maslenica {
+            font-size: 4vh;
+        }
+
+        .bottom {
+            height: 25vh;
+            width: 70vw;
+            display: flex;
+        }
+
+        .bottom .left {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding-left: 15%;
+        }
+
+        .bottom .right {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 2vh;
+            padding-right: 12%;
+        }
+
+        .bottom img {
+            height: 100%;
+        }
+
+        .bottom .left img {
+            transform: rotate(-70deg);
+        }
+
+        .bottom .right img {
+            transform: rotate(90deg);
+        }
+
+
+    </style>
+
+    <script type="text/jsx">
+      ReactDOM.render(
+        <div className={'app'}>
+          <div className={'content'}>
+
+            <div className={'wifineeded'}>
+
+              <div className={'title'}>
+                <div className={'top'}>
+                  <div className={'left'}>
+                    <img alt='f6' src={`public/theme/decoration/F-6.png`} />
+                  </div>
+                  <div className={'center'}>
+                    <img src={`public/theme/title_red.svg`} />
+                  </div>
+                  <div className={'right'}>
+                    <img src={'public/theme/decoration/F-2.png'} />
+                  </div>
+                </div>
+                <div className={'bottom'}>
+                </div>
+              </div>
+
+              <div className={'top'}>
+                <img src={'public/theme/decoration/F-4.png'} />
+              </div>
+              <div className={'message'}>
+                Пожалуйста,<br/>
+                подключитесь<br/>
+                к Wi-Fi<br/>
+                <div className={'maslenica'}>MASLENITSA</div>
+              </div>
+              <div className={'bottom'}>
+                <div className={'left'}>
+                  <img src={'public/theme/decoration/F-5.png'} />
+                </div>
+                <div className={'right'}>
+                  <img src={'public/theme/decoration/F-1.png'} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>,
+        document.getElementById('root'),
+      );
+    </script>
+</body>
+</html>
